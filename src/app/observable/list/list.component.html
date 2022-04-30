@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="list-group list-group-horizontal">
+    <a
+      class="list-group-item mylist"
+      *ngFor="let item of list"
+      [routerLink]="item.path"
+    >
+      {{ item.title | titlecase }}
+    </a>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+.mylist {
+  font-size: 1.25rem;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-in;
+
+  &:hover {
+    background-color: aqua;
+  }
+}
