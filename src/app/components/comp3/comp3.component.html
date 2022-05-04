@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card-header">Component #1</div>
+  <div class="card-body">
+    <h5 class="card-title">
+      Username is <strong>{{ userName }}</strong>
+    </h5>
+    <input type="text" class="form-control mb-2" #input />
+    <button class="btn btn-primary" (click)="onClick(input.value)">
+      Change
+    </button>
+  </div>
+</div>

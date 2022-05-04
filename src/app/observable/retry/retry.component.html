@@ -1,0 +1,46 @@
+<div class="my-3">
+  <h2>Retry</h2>
+  <p class="lead">
+    Retry an observable sequence a specific number of times should an error
+    occur
+  </p>
+
+  <div class="row">
+    <div class="col-md-6">
+      <table class="table" *ngIf="person">
+        <tr>
+          <th>Id</th>
+          <td>{{ person.id }}</td>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <td>{{ person.name }}</td>
+        </tr>
+        <tr>
+          <th>Username</th>
+          <td>{{ person.username }}</td>
+        </tr>
+        <tr>
+          <th>Phone</th>
+          <td>{{ person.phone }}</td>
+        </tr>
+      </table>
+      <button
+        class="btn btn-primary"
+        type="button"
+        [disabled]="fetchingData"
+        (click)="fetchData()"
+      >
+        <span
+          class="spinner-border spinner-border-sm"
+          role="status"
+          aria-hidden="true"
+          *ngIf="fetchingData"
+        ></span>
+        {{ fetchData ? "Fetch Data" : "Fetching..." }}
+      </button>
+      <br />
+      <p>{{ this.status }}</p>
+    </div>
+  </div>
+</div>
